@@ -3,17 +3,32 @@
 */* Todos los párrafos de la pagina */
 p { color: #555; }
  
-/* Solo los párrafos contenidos en #primero */
+/* Solo los párrafos contenidos en #primero 
+Cuando te encuentres un id llamado primero y te encuentres un párrafo, le vas a ponber un color con código x
+todo el párrafo completito se trata como azúl, pero se pueden sobreescribir estilos dependiendo del orden en el que
+lo vaya encontrando*/
 #primero p { color: #336699; }
  
-/* Todos los enlaces la pagina */
-a { color: #CC3300; }
+/* Todos los enlaces la pagina 
+Cuando te encuentres con un ancla (la que sea a lo largo del documento) que le ponga un color rojo
+Al ponerle #primero, hacemos que eso sólo aplique para las etiquetas que están dentro del párrafo con id
+primero*/
+#primero a { color: chartreuse;
+             font-size: 20px; 
+             font-weight: bolder;}
  
-/* Los elementos em contenidos en #primero */
-#primero em { background: #FFFFCC; padding: .1em; }
+/* Los elementos em contenidos en #primero 
+El em en los estilos existe en "primero em" 
+Toma primero el em genérico y sobreescribe algunos elementos que están en el em dentro del id
+Sobreescribe el background y el padding, pero sigue conservando el borde del em genérico*/
+#primero em { background: #FFFFCC; 
+              padding: .1em; }
  
-/* Todos los elementos em de tipo especial en toda la pagina */
-em { background: #FFCC99; border: 1px solid #FF9900; padding: .1em; }
+/* Todos los elementos em de tipo especial en toda la pagina 
+Padding es el relleno entre elementos, margine es cómo se pone el elemento respecto al márgen de página que haya*/
+em { background: #FFCC99; 
+    border: 1px solid #FF9900; 
+    padding: .1em; }
 
  
 /* Elementos span contenidos en .normal */

@@ -1,5 +1,9 @@
 .container {
-  margin: 40px auto;
+  margin: 40px auto; /*Actúa sobre el elemento y se posiciona con respecto a las medidas de la ventana*/
+  /*Margin tiene cuatro medidas: superior, derecha, inferior, izquierda o se puede especificar por pares, 
+  la primer medida sería arriba y abajo, la segunda medida sería a los costados. Si se deja sólo una medida
+  define los 4 (superior, derecho, inferior e izquierdo) con el mismo tamaño*/
+  
   max-width: 800px;
 }
 

@@ -1,4 +1,5 @@
-[class^=col]{
+[class^=col]{ /*Selector que dice que cuando te encuentres cualquier elemento con una clase llamada "col"
+    que haga lo siguiente (como comportamiento genérico)*/
 /*.col{*/
     float:left;
     height:auto;
@@ -14,16 +15,16 @@
 }
 
 .col-1{
-    width: 10%;
+    width: 10%; /*Que la columna ocupe el 10% del espacio total de la fila, por eso tenemos 10 columnas ocupando el 10% en el primer renglón*/
 }
 .col-2{
-    width: 20%;
+    width: 20%; /*La columna 2 ocupa el 20%, así que solo cabrían 5 columnas en esa disposición de fila*/
 }
 .col-3{
-    width: 30%;
+    width: 30%; /*Caben 3 rejillas del 30% y completar con una de 10% O 2 de 30% y 3 de 20%*/
 }
 .col-4{
-    width: 40%;
+    width: 40%; /**/
 }
 .col-5{
     width: 50%;
@@ -41,13 +42,18 @@
     width: 90%;
 }
 .col-10{
-    width: 100%;
+    width: 100%; /*La rejilla del 100% ya ocupa el total de la fila*/
 }
 
 body{
-    background-color: red;
+    background-color: red; /*Todo esto (de aquí hacia arriba) es un comportamiento genérico, pero
+    en la página no se muestra el fondo rojo porque otra directiva lo sobreescribió después*/
 }
+
+/*Esta es una media query que indica ¿De qué forma se va a comportar 
+dependiendo de la resolución de la pantalla? (Comportamiento específico)*/
 @media only screen and (min-width: 0px) and (max-width: 320px){
+    /*Con min y max digo que desde una pantalla de 0 pixeles hasta una de 320 pixeles o puedo dejar sólo el max*/
     body{ background-color: yellow; }
     .col-1, .col-2{
     width: 100%;
@@ -56,7 +62,8 @@ body{
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    body{ background-color: green; }
+    /*Aquí sí se debe especificar desde mínimo 320 hasta máximo 480 porque sino se sobreescribiría la anterior "desde 0 hasta 480"*/
+    body{ background-color: green; } /*Aquí se sobreescribe el background*/
     .col-1, .col-2{
     width: 100%;
     }
@@ -74,9 +81,13 @@ body{
 @media only screen and (min-width: 768px) and (max-width: 1200px){
     body{ background-color:gray; }
 }
-@media screen and (min-width: 1200px) and (max-width: 1600px) { 
-    body{ background-color:white; }
-}
 
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) { 
+    /*Aquí podría sólo dejar "min" pero en ese caso nunca aparecería el color rojo de fondo
+    Así como está definida ahorita sí se pone el fondo rojo en resoluciones de 2000 por ejemplo (televisión, etc)*/
+    body{ background-color:white; }
+    /*Si en una resolución grande mostraba una imagen que pesaba mucho, al ser una pequeña puedo no
+    mostrarla o que se vea otra*/
 }
 

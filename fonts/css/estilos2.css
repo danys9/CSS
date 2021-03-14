@@ -15,7 +15,11 @@ Al ponerle #primero, hacemos que eso sólo aplique para las etiquetas que están
 primero*/
 #primero a { color: chartreuse;
              font-size: 20px; 
-             font-weight: bolder;}
+             font-weight: bolder;} /*Font weight es ¿Qué tan grueso quieres el estilo de la fuente? La normal es la 400
+             más o menos, las que son de más de 400 suelen ser negritas. En google font podemos buscar una fuente y en HTML
+             agregar la font-family o importarla con "import" o con "link". Primero se importa la cabecera como si 
+             fuera la hoja de estilo href="link de la página de google, ya se le dice allí la familia y pesos permitidos. En
+             la hoja de estilo se debería de especificar la font-family para que funcione"*/
  
 /* Los elementos em contenidos en #primero 
 El em en los estilos existe en "primero em" 

@@ -1,13 +1,18 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="transform.css">
+<link rel="stylesheet" type="text/css" href="css/transform.css">
+<!--En realidad está mal la ruta del documento, por eso en un navegador no carga nada
+la ruta está mal. Con ayuda de CSS n esta página se están transformando figuras-->
 </head>
 <body>
-<div class="container">
+<div class="container"> <!--Contenedor principal (clase), a partir de él se comienzan a modelar el resto de elementos-->
   <p></p>
   <div class="wrap">
     <div class="element element-1">
-      50% 50%
+      50% 50% <!--Estos son los elementos, este es un cuadrado, tienen "element" y una clase extra
+      element define las clases genéricas y el element-1 define cosas específicas como el color.
+      El primer element define posiciones relativas, alineaciones de texto (que si se quita, el texto se
+      va hacia el lado izquierdo). El color y las transformaciones son cuestiones de la clase específica-->
     </div>
   </div>
   <div class="wrap">
